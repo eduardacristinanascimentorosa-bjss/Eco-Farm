@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFarm</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="menuInicial">
+
+    <header class="header">
+        <div class="logo-box">
+            <h1>ECOFARM</h1>
+            <p>SIMULADOR DE FAZENDA SUSTENTÁVEL</p>
+            <small>ONU ODS 13</small>
+        </div>
+    </header>
+
+    <main class="main-menu">
+        <button class="btn-play" onclick="iniciarJogo()">
+            JOGAR
+            <span>INICIAR RESTAURAÇÃO</span>
+        </button>
+
+        <div class="secondary-btns">
+            <button class="btn-small">⚙️ OPÇÕES</button>
+            <button class="btn-small">🚪 SAIR</button>
+        </div>
+    </main>
+
+    <section class="bottom-panels">
+        <div class="panel-menu">
+            <div class="panel-header">MINHA FAZENDA</div>
+            <p>Restaure o Solo,<br>Plante Vida</p>
+            <div class="icone">🏡</div>
+        </div>
+
+        <div class="panel-menu">
+            <div class="panel-header">RECURSOS</div>
+            <p>Gestão Ecológica,<br>Água e Energia</p>
+            <div class="icone">💧☀️</div>
+        </div>
+
+        <div class="panel-menu">
+            <div class="panel-header">ODS 13</div>
+            <p>Ação Climática,<br>Impacto Real</p>
+            <div class="icone">🌍</div>
+        </div>
+    </section>
+
+</div>
+<div id="jogo" style="display:none;">
+
+  
+
+    <div class="container">
+
+        <h1>🌱 ECOFARM 🌱</h1>
+
+        <div class="painel">
+
+            <div class="card">
+                <h3>💰 Moedas</h3>
+                <span id="moedas">500</span>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Energia</h3>
+                <span id="energia">5</span>
+            </div>
+
+            <div class="card">
+                <h3>💧 Água</h3>
+                <span id="agua">100</span>
+            </div>
+
+            <div class="card">
+                <h3>☣️ Poluição</h3>
+                <span id="poluicao">40</span>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Restauração</h3>
+                <span id="restauracao">0</span>
+            </div>
+
+            <div class="card">
+                <h3>📅 Dia</h3>
+                <span id="dia">1</span>
+            </div>
+
+            <div class="card">
+                <h3>⭐ Nível</h3>
+                <span id="nivel">1</span>
+            </div>
+
+        </div>
+
+        <div class="acoes">
+
+            <button onclick="plantarMorango()">🍓 Plantar Morango</button>
+
+            <button onclick="plantarBanana()">🍌 Plantar Banana</button>
+
+            <button onclick="limparArea()">🧹 Limpar Área</button>
+
+            <button onclick="comprarGalinha()">🐔 Comprar Galinha</button>
+
+            <button onclick="comprarVaca()">🐄 Comprar Vaca</button>
+
+            <button onclick="construirPainelSolar()">☀️ Painel Solar</button>
+
+            <button onclick="venderMorango()">💰 Vender Morango</button>
+
+            <button onclick="venderBanana()">💰 Vender Banana</button>
+
+            <button onclick="venderOvos()">🥚 Vender Ovos</button>
+
+            <button onclick="venderLeite()">🥛 Vender Leite</button>
+
+            <button onclick="proximoDia()">🌞 Próximo Dia</button>
+
+        </div>
+
+        <div class="fazenda">
+
+            <h2>🌾 Plantações</h2>
+
+            <div id="lista-plantacoes"></div>
+
+        </div>
+
+        <div class="inventario">
+
+            <h2>🎒 Inventário</h2>
+
+            <p>🍓 Morangos: <span id="invMorango">0</span></p>
+
+            <p>🍌 Bananas: <span id="invBanana">0</span></p>
+
+            <p>🥚 Ovos: <span id="invOvos">0</span></p>
+
+            <p>🥛 Leite: <span id="invLeite">0</span></p>
+
+        </div>
+
+        <div class="missoes">
+
+            <h2>📋 Missões</h2>
+
+            <ul id="listaMissoes"></ul>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+    <script src="jogo.js"></script>
+
+</body>
+</html>
