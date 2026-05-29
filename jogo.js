@@ -773,20 +773,38 @@ function carregarJogo() {
 
 function iniciarJogo(){
 
+
     document.getElementById(
-        "menuInicial"
+    "menuInicial"
     ).style.display = "none";
 
     document.getElementById(
-        "jogo"
+    "jogo"
     ).style.display = "block";
 
-    atualizarTela();
+    document.getElementById(
+    "avatarJogo"
+    ).src = avatarEscolhido;
 }
+    atualizarTela();
+
 
 window.onload = function () {
 
-    carregarJogo();
+   
+};
+
+let avatarEscolhido =
+"avatar.1.png";
+
+function trocarAvatar(avatar){
+
+    avatarEscolhido = avatar;
+
+    document.getElementById(
+    "avatarSelecionado"
+    ).src = avatar;
+}
+ carregarJogo();
 
     atualizarTela();
-};
