@@ -795,7 +795,7 @@ window.onload = function () {
 };
 
 let avatarEscolhido =
-"avatar.1.png";
+"avatar1.png";
 
 function trocarAvatar(avatar){
 
