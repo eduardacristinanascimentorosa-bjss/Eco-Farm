@@ -12,6 +12,7 @@
 <body>
     <div id="menuInicial">
 
+        
     <header class="header">
         <div class="logo-box">
             <h1>ECOFARM</h1>
@@ -19,12 +20,60 @@
             <small>ONU ODS 13</small>
         </div>
     </header>
+    
+      
+
+ <div class="selecionar-avatar">
+    <h2>Escolha seu personagem</h2>
+
+    <img
+    id="avatarSelecionado"
+    src="avatar1.png">
+
+    <div class="lista-avatares">
+
+        <img src="avatar1.png"
+        onclick="trocarAvatar('avatar1.png')">
+
+        <img src="avatar2.png"
+        onclick="trocarAvatar('avatar2.png')">
+
+        <img src="avatar3.png"
+        onclick="trocarAvatar('avatar3.png')">
+
+        <img src="avatar4.png"
+        onclick="trocarAvatar('avatar4.png')">
+
+        <img src="avatar5.png"
+        onclick="trocarAvatar('avatar5.png')">
+
+        <img src="avatar6.png"
+        onclick="trocarAvatar('avatar6.png')">
+
+        <img src="avatar7.png"
+        onclick="trocarAvatar('avatar7.png')">
+
+        <img src="avatar8.png"
+        onclick="trocarAvatar('avatar8.png')">
+
+        <img src="avatar9.png"
+        onclick="trocarAvatar('avatar9.png')">
+
+    </div>
+
+</div>
+
+
 
     <main class="main-menu">
-        <button class="btn-play" onclick="iniciarJogo()">
-            JOGAR
-            <span>INICIAR RESTAURAÇÃO</span>
-        </button>
+      <button class="btn-play"
+    onclick="iniciarJogo()">
+
+        INICIAR JOGO
+
+    </button>
+
+
 
         <div class="secondary-btns">
             <button class="btn-small">⚙️ OPÇÕES</button>
@@ -52,6 +101,7 @@
         </div>
     </section>
 
+</div>
 </div>
 <div id="jogo" style="display:none;">
 
@@ -96,6 +146,7 @@
             <div class="card">
                 <h3>⭐ Nível</h3>
                 <span id="nivel">1</span>
+                
             </div>
 
         </div>
