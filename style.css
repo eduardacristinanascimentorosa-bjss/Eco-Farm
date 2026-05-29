@@ -12,15 +12,20 @@ body{
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+    background-attachment:fixed;
 
     min-height:100vh;
 
     color:white;
 }
 
+/* ========================= */
+/* TELA DO JOGO */
+/* ========================= */
+
 .container{
 
-    background:rgba(0,0,0,0.65);
+    background:rgba(0,0,0,0.55);
 
     min-height:100vh;
 
@@ -57,9 +62,9 @@ h2{
 
 .card{
 
-    background:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.45);
 
-    border:1px solid rgba(255,255,255,0.2);
+    border:1px solid rgba(255,255,255,0.15);
 
     border-radius:15px;
 
@@ -67,7 +72,9 @@ h2{
 
     text-align:center;
 
-    backdrop-filter:blur(5px);
+    backdrop-filter:blur(6px);
+
+    color:white;
 }
 
 .card h3{
@@ -100,7 +107,7 @@ button{
 
     border:none;
 
-    border-radius:10px;
+    border-radius:12px;
 
     cursor:pointer;
 
@@ -109,6 +116,10 @@ button{
     font-size:14px;
 
     transition:0.3s;
+
+    background:#4CAF50;
+
+    color:white;
 }
 
 button:hover{
@@ -118,13 +129,15 @@ button:hover{
 
 .fazenda{
 
-    background:rgba(255,255,255,0.10);
+    background:rgba(0,0,0,0.45);
 
     border-radius:15px;
 
     padding:20px;
 
     margin-bottom:25px;
+
+    backdrop-filter:blur(5px);
 }
 
 #lista-plantacoes{
@@ -139,13 +152,17 @@ button:hover{
 
 .plantacao-card{
 
-    background:white;
+    background:rgba(0,0,0,0.55);
 
-    color:black;
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.2);
 
     border-radius:10px;
 
     padding:15px;
+
+    backdrop-filter:blur(5px);
 
     box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
@@ -162,13 +179,15 @@ button:hover{
 
 .inventario{
 
-    background:rgba(255,255,255,0.10);
+    background:rgba(0,0,0,0.45);
 
     border-radius:15px;
 
     padding:20px;
 
     margin-bottom:25px;
+
+    backdrop-filter:blur(5px);
 }
 
 .inventario p{
@@ -180,11 +199,13 @@ button:hover{
 
 .missoes{
 
-    background:rgba(255,255,255,0.10);
+    background:rgba(0,0,0,0.45);
 
     border-radius:15px;
 
     padding:20px;
+
+    backdrop-filter:blur(5px);
 }
 
 #listaMissoes{
@@ -203,6 +224,237 @@ button:hover{
     border-radius:8px;
 }
 
+/* ========================= */
+/* MENU INICIAL */
+/* ========================= */
+
+#menuInicial{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:30px;
+
+    background:rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+
+.logo-box{
+
+    background:#8b5a2b;
+
+    border:4px solid #5d3a1a;
+
+    border-radius:20px;
+
+    padding:20px 60px;
+
+    color:white;
+
+    box-shadow:0 8px 0 #3e2712;
+
+    margin-bottom:30px;
+}
+
+.logo-box h1{
+
+    margin:0;
+
+    font-size:60px;
+
+    text-shadow:2px 2px 5px black;
+}
+
+.logo-box p{
+
+    margin:5px 0;
+
+    font-size:18px;
+}
+
+/* AVATAR */
+
+.selecionar-avatar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+#avatarSelecionado{
+
+    width:160px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    background:white;
+}
+
+.lista-avatares{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,90px);
+
+    gap:15px;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+}
+
+.lista-avatares img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    background:white;
+}
+
+.lista-avatares img:hover{
+
+    transform:scale(1.08);
+}
+
+/* BOTÕES */
+
+.main-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-bottom:40px;
+}
+
+.btn-play{
+
+    background:linear-gradient(#7ed957,#4CAF50);
+
+    border:none;
+
+    border-radius:20px;
+
+    padding:20px 100px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.secondary-btns{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+}
+
+.btn-small{
+
+    background:#6c757d;
+
+    color:white;
+
+    padding:15px 40px;
+
+    font-size:22px;
+}
+
+/* PAINÉIS */
+
+.bottom-panels{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin-top:20px;
+
+    margin-bottom:40px;
+}
+
+.panel-menu{
+
+    background:rgba(255,255,255,0.85);
+
+    color:black;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    position:relative;
+}
+
+.panel-header{
+
+    background:#2d5a27;
+
+    color:white;
+
+    padding:5px 15px;
+
+    border-radius:10px;
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.icone{
+
+    font-size:40px;
+
+    margin-top:10px;
+}
+
+/* RESPONSIVO */
+
 @media(max-width:768px){
 
     h1{
@@ -219,136 +471,21 @@ button:hover{
         grid-template-columns:
         repeat(2,1fr);
     }
-}
-#menuInicial{
 
-    height:100vh;
+    .bottom-panels{
 
-    display:flex;
+        grid-template-columns:1fr;
+    }
 
-    flex-direction:column;
+    .logo-box h1{
 
-    justify-content:center;
+        font-size:40px;
+    }
 
-    align-items:center;
+    .btn-play{
 
-    text-align:center;
+        padding:15px 50px;
 
-    background:rgba(0,0,0,0.65);
-}
-
-#menuInicial h1{
-
-    font-size:70px;
-
-    margin-bottom:20px;
-}
-
-#menuInicial p{
-
-    font-size:22px;
-
-    margin-bottom:30px;
-}
-
-#menuInicial button{
-
-    padding:20px 40px;
-
-    font-size:22px;
-
-    background:#4CAF50;
-
-    color:white;
-
-    border:none;
-
-    border-radius:15px;
-}
-#menuInicial{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
-    text-align:center;
-    background:rgba(0,0,0,0.25);
-}
-
-.logo-box{
-    background:#8b5a2b;
-    border:4px solid #5d3a1a;
-    border-radius:20px;
-    padding:15px 40px;
-    color:white;
-    box-shadow:0 8px 0 #3e2712;
-}
-
-.logo-box h1{
-    margin:0;
-    font-size:60px;
-}
-
-.logo-box p{
-    margin:5px 0;
-}
-
-.main-menu{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.btn-play{
-    background:linear-gradient(#a0d911,#5b8c00);
-    border:4px solid #3f6600;
-    border-radius:50px;
-    padding:20px 80px;
-    color:white;
-    font-size:30px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.secondary-btns{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-}
-
-.btn-small{
-    background:#8c8c8c;
-    color:white;
-}
-
-.bottom-panels{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    width:90%;
-    max-width:1000px;
-}
-
-.panel-menu{
-    background:rgba(255,255,255,0.9);
-    color:black;
-    padding:20px;
-    border-radius:15px;
-    position:relative;
-}
-
-.panel-header{
-    background:#2d5a27;
-    color:white;
-    padding:5px 15px;
-    border-radius:10px;
-    position:absolute;
-    top:-12px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.icone{
-    font-size:40px;
-    margin-top:10px;
+        font-size:22px;
+    }
 }
